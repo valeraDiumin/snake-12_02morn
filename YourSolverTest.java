@@ -1,12 +1,13 @@
 package com.codenjoy.dojo.snake.client;
 
 import com.codenjoy.dojo.services.RandomDice;
+import com.codenjoy.dojo.snake.model.Elements;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 
-public class YourSolverTest {
+public class YourSolverTest {//круто, тестами мы можем сразу выставить нужную ситуацию на борде?
     @Test
     public void testSameDirection() {
         assertB("☼☼☼☼☼☼" +
@@ -87,6 +88,57 @@ public class YourSolverTest {
                 "☼    ☼" +
                 "☼    ☼" +
                 "☼☼☼☼☼☼", "LEFT");
+
+    }
+    @Test
+    public void testEat_BadApple(){
+        assertB("☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼" +
+                "☼   ╙════►☼" +
+                "☼            ☻☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼          ☺  ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼", "RIGHT");
+
+        assertB("☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼" +
+                "☼   ╙════►☼" +
+                "☼            ☻☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼          ☺  ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼", "DOWN");
+
+        assertB("☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼" +
+                "☼              ☼" +
+                "☼              ☼" +
+                "☼     ╓       ☼" +
+                "☼     ║☻      ☼" +
+                "☼     ║◄══╗ ☼" +
+                "☼     ╚═══╝ ☼" +
+                "☼          ☺  ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼             ☼" +
+                "☼☼☼☼☼☼☼☼☼☼☼☼☼☼☼", "UP");
 
     }
 
